@@ -2,6 +2,7 @@
 #include "RestauranteCaseiro.h"
 #include "Pedido.h"
 
+
 using namespace std;
 
     void RestauranteCaseiro::adicionaPedido(int m, int n, int q, double p, string d) {
@@ -16,7 +17,6 @@ using namespace std;
         for(int i = 0; i < mesas.size(); i++){
             if(mesas[i].getMesa() == m){
                 total += mesas[i].calculaTotal();
-
             }
         }
         return  total;
@@ -24,23 +24,23 @@ using namespace std;
 
     double RestauranteCaseiro::calculaTotalRestaurante(){
         double total;
-
         for(int i = 0; i < mesas.size(); i++){
-              total += mesas[i].calculaTotal();
+              total += calculaTotalMesa(i+1);
            }
         return total;
     }
-/*
+
+     void RestauranteCaseiro::zeraTodasAsMesas(){
+        mesas[0].zeraPedidos();
+        mesas.clear();
+     }
+
     void RestauranteCaseiro::zeraMesa(int m){
         for(int i = 0; i < mesas.size(); i++){
             if(mesas[i].getMesa() == m){
-                mesas[i].erase();
+                Pedido p = mesas[i].getPedidos();
+                mesas[i].zeraPedidosDeMesa(p);
+                mesas[i].setMesa(0);
             }
         }
     }
-
-    void RestauranteCaseiro::zeraTodasAsMesas(){
-        mesas[0].zeraPedidos();
-        mesas.clear();
-    }
-*/

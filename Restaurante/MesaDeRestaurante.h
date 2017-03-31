@@ -11,15 +11,19 @@ class MesaDeRestaurante {
 
     private:
         int mesa;
+        Pedido ped;
         vector <Pedido> pedidos;
 
     public:
         void setMesa(int n);
+        void setPedidos(Pedido p);
         int getMesa();
+        Pedido getPedidos();
 
         void adicionaPedido(int n, int q, double p, string d);
-        void zeraPedidos();
         double calculaTotal();
+        void zeraPedidos();
+        void zeraPedidosDeMesa(Pedido p);
 
 };
 

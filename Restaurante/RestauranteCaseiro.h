@@ -17,7 +17,7 @@ public:
     double calculaTotalMesa(int m);
     double calculaTotalRestaurante();
     void zeraMesa(int m);
-    void zeraTodasAsMesas():
+    void zeraTodasAsMesas();
 };
 
 #endif // RESTAURANTECASEIRO_H_INCLUDED

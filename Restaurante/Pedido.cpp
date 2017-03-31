@@ -3,12 +3,6 @@
 
 using namespace std;
 
-    Pedido::Pedido(int n, int q, double p, string d){
-        setNumero(n);
-        setQuantidade(q);
-        setPreco(p);
-        setDescricao(d);
-        }
     void Pedido::setNumero(int n) {
         numero = n;
     }
@@ -44,3 +38,12 @@ using namespace std;
         precoTotal = getPreco() * getQuantidade();
         return precoTotal;
     }
+
+    void Pedido::zeraPedidos(){
+
+        setNumero(0);
+        setQuantidade(0);
+        setPreco(0.0);
+        setDescricao("Nada");
+    }
+

@@ -5,7 +5,6 @@
 
 using namespace std;
 
-
 class Pedido {
 
     private:
@@ -15,7 +14,6 @@ class Pedido {
         string descricao;
 
     public:
-        Pedido (int n, int q, double p, string d);
         void setNumero(int n);
         void setQuantidade (int q);
         void setPreco(double p);
@@ -26,6 +24,8 @@ class Pedido {
         double getPreco();
         string getDescricao();
         double getPrecoTotal();
+        void zeraPedidos();
+
 
 };
 #endif // PEDIDO_H_INCLUDED
