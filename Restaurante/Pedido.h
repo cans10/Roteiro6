@@ -25,6 +25,7 @@ class Pedido {
         int getQuantidade();
         double getPreco();
         string getDescricao();
+        double getPrecoTotal();
 
 };
 #endif // PEDIDO_H_INCLUDED

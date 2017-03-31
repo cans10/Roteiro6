@@ -9,27 +9,38 @@ using namespace std;
         mesa.setMesa(m);
         mesa.adicionaPedido(n, q, p, d);
         mesas.push_back(mesa);
-
     }
 
     double RestauranteCaseiro::calculaTotalMesa(int m){
         double total = 0.0;
-        MesaDeRestaurante mesa;
-        for(int i = 0; i < mesas.size; i++){
-            if(mesas[i] = m){
-                mesa = mesas[i];
-                total += mesa.calculaTotal(mesa.)
+        for(int i = 0; i < mesas.size(); i++){
+            if(mesas[i].getMesa() == m){
+                total += mesas[i].calculaTotal();
 
             }
+        }
+        return  total;
     }
 
-    double RestauranteCaseiro::calculaTotal(){
+    double RestauranteCaseiro::calculaTotalRestaurante(){
         double total;
 
-        for(int i = 0; i < mesa.size; i++){
-           for(int j = 0; j < m.pedido.size; j++){
-              total += mesa.getMesa.getPreco;
+        for(int i = 0; i < mesas.size(); i++){
+              total += mesas[i].calculaTotal();
            }
-        }
         return total;
     }
+/*
+    void RestauranteCaseiro::zeraMesa(int m){
+        for(int i = 0; i < mesas.size(); i++){
+            if(mesas[i].getMesa() == m){
+                mesas[i].erase();
+            }
+        }
+    }
+
+    void RestauranteCaseiro::zeraTodasAsMesas(){
+        mesas[0].zeraPedidos();
+        mesas.clear();
+    }
+*/

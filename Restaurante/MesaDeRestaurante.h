@@ -17,10 +17,9 @@ class MesaDeRestaurante {
         void setMesa(int n);
         int getMesa();
 
-        vector <Pedidos> retornoPedidos();
         void adicionaPedido(int n, int q, double p, string d);
         void zeraPedidos();
-        double calculaTotal(int n);
+        double calculaTotal();
 
 };
 

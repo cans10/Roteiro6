@@ -16,6 +16,8 @@ public:
     void adicionaPedido(int m, int n, int q, double p, string d);
     double calculaTotalMesa(int m);
     double calculaTotalRestaurante();
+    void zeraMesa(int m);
+    void zeraTodasAsMesas():
 };
 
 #endif // RESTAURANTECASEIRO_H_INCLUDED
